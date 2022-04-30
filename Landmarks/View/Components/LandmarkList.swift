@@ -10,8 +10,15 @@ struct LandmarkList: View {
     // MARK: - PROPERTIES
     var body: some View {
         
-        List(landmarks) { (eachLandmark: Landmark) in
-            LandmarkRow.init(landmark: eachLandmark)
+        NavigationView {
+            List(landmarks) { (eachLandmark: Landmark) in
+                NavigationLink(destination: {
+                    LandmarkDetailView()
+                }, label: {
+                    LandmarkRow.init(landmark: eachLandmark)
+                })
+            }
+            .navigationTitle(Text("Landmarks"))
         }
     }
     
