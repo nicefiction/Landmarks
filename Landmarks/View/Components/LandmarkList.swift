@@ -8,12 +8,13 @@ struct LandmarkList: View {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
+    // MARK: - COMPUTED PROPERTIES
     var body: some View {
         
         NavigationView {
             List(landmarks) { (eachLandmark: Landmark) in
                 NavigationLink(destination: {
-                    LandmarkDetailView()
+                    LandmarkDetailView(landmark: eachLandmark)
                 }, label: {
                     LandmarkRow.init(landmark: eachLandmark)
                 })
@@ -21,10 +22,6 @@ struct LandmarkList: View {
             .navigationTitle(Text("Landmarks"))
         }
     }
-    
-    
-    
-    // MARK: - COMPUTED PROPERTIES
     // MARK: - STATIC METHODS
     // MARK: - INITIALIZERS
     // MARK: - METHODS
@@ -40,9 +37,21 @@ struct LandmarkList: View {
 struct LandmarkList_Previews: PreviewProvider {
     
     // MARK: - STATIC PROPERTIES
+    static let devices: Array<String> = [
+        "iPhone 13 mini",
+        "iPhone SE (3rd generation)",
+        "iPhone 13 Pro"
+    ]
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        LandmarkList()
+        ForEach(devices, id: \.self) { (eachDevice: String) in
+            
+            LandmarkList()
+                .previewDevice(PreviewDevice.init(rawValue: eachDevice))
+        }
     }
 }

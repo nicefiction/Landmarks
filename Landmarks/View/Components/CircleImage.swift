@@ -8,10 +8,14 @@ struct CircleImage: View {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
+    var image: Image
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     var body: some View {
         
-        Image("turtlerock")
+        image
             .clipShape(Circle())
             .overlay {
                 Circle()
@@ -39,6 +43,7 @@ struct CircleImage_Previews: PreviewProvider {
     // MARK: - STATIC PROPERTIES
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
-        CircleImage()
+        
+        CircleImage(image: Image("turtlerock"))
     }
 }

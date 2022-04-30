@@ -8,34 +8,40 @@ struct LandmarkDetailView: View {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
+    let landmark: Landmark
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     var body: some View {
         
-        VStack {
-            MapView()
+        ScrollView {
+            MapView(coordinate: landmark.locationCoordinate)
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 300.0)
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(landmark.name)
                     .font(.title)
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.park)
                     Spacer()
-                    Text("California")
+                    Text(landmark.state)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 Divider()
-                Text("About Turtle Rock")
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here.")
+                Text(landmark.description)
             }
             .padding()
             Spacer()
         }
+        .navigationTitle(Text(landmark.name))
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     
@@ -58,6 +64,6 @@ struct LandmarkDetail_Previews: PreviewProvider {
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        LandmarkDetailView()
+        LandmarkDetailView(landmark: landmarks[0])
     }
 }

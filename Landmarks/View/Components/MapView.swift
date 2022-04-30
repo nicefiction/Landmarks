@@ -12,11 +12,21 @@ struct MapView: View {
                                                                                             longitude: -116.166_868),
                                                         span: MKCoordinateSpan.init(latitudeDelta: 0.2,
                                                                                     longitudeDelta: 0.2))
+    
+    
+    
     // MARK: - PROPERTIES
+    var coordinate: CLLocationCoordinate2D
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     var body: some View {
         
         Map(coordinateRegion: $region)
+            .onAppear {
+                setRegion(coordinate)
+            }
     }
     
     
@@ -24,6 +34,17 @@ struct MapView: View {
     // MARK: - STATIC METHODS
     // MARK: - INITIALIZERS
     // MARK: - METHODS
+    /// Updates the region based on a coordinate value:
+    private func setRegion(_ coordinate: CLLocationCoordinate2D)
+    -> Void {
+        
+        region = MKCoordinateRegion(center: coordinate,
+                                    span: MKCoordinateSpan(latitudeDelta: 0.2,
+                                                           longitudeDelta: 0.2))
+    }
+    
+    
+    
     // MARK: - HELPER METHODS
 }
 
@@ -32,13 +53,14 @@ struct MapView: View {
 
 
 
+// PREVIEWS ///////////////////////////////
 struct MapView_Previews: PreviewProvider {
-    // PREVIEWS /////////////////
     
     // MARK: - STATIC PROPERTIES
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        MapView()
+        MapView(coordinate: CLLocationCoordinate2D.init(latitude: 34.011_286,
+                                                        longitude: -116.166_868))
     }
 }
