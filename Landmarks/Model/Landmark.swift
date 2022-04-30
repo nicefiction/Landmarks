@@ -21,11 +21,11 @@ struct Landmark: Codable,
     /// because users of the Landmarks structure care only about the image itself:
     private var imageName: String
     private var coordinates: Coordinates
-    var isFeatured: Bool
+    var isFavorite: Bool
     
     var category: String
     var city: String
-    var isFavorite: Bool
+    var isFeatured: Bool
 
     
     

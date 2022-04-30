@@ -7,12 +7,25 @@ struct LandmarkDetailView: View {
     
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
+    @EnvironmentObject var modelData: ModelData
+    
+    
+    
     // MARK: - PROPERTIES
     let landmark: Landmark
     
     
     
     // MARK: - COMPUTED PROPERTIES
+    var findLandmarkIndex: Int {
+        
+        return modelData.landmarks.firstIndex(where: {
+            landmark.id == $0.id
+        })!
+    }
+    
+    
+    
     var body: some View {
         
         ScrollView {
@@ -23,8 +36,11 @@ struct LandmarkDetailView: View {
                 .offset(y: -130)
                 .padding(.bottom, -130)
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isFavorited: $modelData.landmarks[findLandmarkIndex].isFavorite)
+                }
                 HStack {
                     Text(landmark.park)
                     Spacer()
@@ -61,9 +77,14 @@ struct LandmarkDetailView: View {
 struct LandmarkDetail_Previews: PreviewProvider {
     
     // MARK: - STATIC PROPERTIES
+    static let modelData = ModelData.init()
+    
+    
+    
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        LandmarkDetailView(landmark: ModelData.init().landmarks[0])
+        LandmarkDetailView(landmark: modelData.landmarks[0])
+            .environmentObject(modelData)
     }
 }
