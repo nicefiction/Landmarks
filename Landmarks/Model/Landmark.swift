@@ -21,14 +21,10 @@ struct Landmark: Codable,
     /// because users of the Landmarks structure care only about the image itself:
     private var imageName: String
     private var coordinates: Coordinates
-    var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D.init(latitude: coordinates.latitude,
-                                    longitude: coordinates.longitude)
-    }
+    var isFeatured: Bool
     
     var category: String
     var city: String
-    var isFeatured: Bool
     var isFavorite: Bool
 
     
@@ -36,6 +32,12 @@ struct Landmark: Codable,
     // MARK: - COMPUTED PROPERTIES
     var image: Image {
         return Image(imageName)
+    }
+    
+    
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D.init(latitude: coordinates.latitude,
+                                    longitude: coordinates.longitude)
     }
     
     
