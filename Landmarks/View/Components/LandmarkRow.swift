@@ -46,6 +46,11 @@ struct LandmarkRow_Previews: PreviewProvider {
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        LandmarkRow(landmark: landmarks[0])
+        Group {
+            LandmarkRow(landmark: landmarks[0])
+            LandmarkRow(landmark: landmarks[1])
+        }
+        .previewLayout(.fixed(width: 300.0, height: 70.0))
+        
     }
 }
