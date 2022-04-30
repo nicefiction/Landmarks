@@ -64,6 +64,6 @@ struct LandmarkDetail_Previews: PreviewProvider {
     // MARK: - COMPUTED PROPERTIES
     static var previews: some View {
         
-        LandmarkDetailView(landmark: landmarks[0])
+        LandmarkDetailView(landmark: ModelData.init().landmarks[0])
     }
 }

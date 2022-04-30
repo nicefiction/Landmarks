@@ -6,6 +6,9 @@ import SwiftUI
 struct LandmarkList: View {
     
     // MARK: - STATIC PROPERTIES
+    @EnvironmentObject var modelData: ModelData
+    /// The `modelData` property gets its value automatically,
+    /// as long as the `environmentObject(_:)` modifier has been applied to a parent.
     @State private var isShowingFavoritesOnly: Bool = true
     
     
@@ -24,7 +27,7 @@ struct LandmarkList: View {
 //                !eachLandmark.isFavorite
 //            }
 //        }
-        landmarks.filter { landmark in
+        modelData.landmarks.filter { landmark in
             (!isShowingFavoritesOnly || landmark.isFavorite)
         }
     }
@@ -34,12 +37,19 @@ struct LandmarkList: View {
     var body: some View {
         
         NavigationView {
-            List(filteredLandmarks) { (eachLandmark: Landmark) in
-                NavigationLink(destination: {
-                    LandmarkDetailView(landmark: eachLandmark)
-                }, label: {
-                    LandmarkRow.init(landmark: eachLandmark)
-                })
+            List {
+                Toggle(isOn: $isShowingFavoritesOnly) {
+                    Text("Show Favorites Only")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                ForEach(filteredLandmarks) { (eachLandmark: Landmark) in
+                    NavigationLink(destination: {
+                        LandmarkDetailView(landmark: eachLandmark)
+                    }, label: {
+                        LandmarkRow.init(landmark: eachLandmark)
+                    })
+                }
             }
             .navigationTitle(Text("Landmarks"))
         }
@@ -74,6 +84,7 @@ struct LandmarkList_Previews: PreviewProvider {
             
             LandmarkList()
                 .previewDevice(PreviewDevice.init(rawValue: eachDevice))
+                .environmentObject(ModelData.init())
         }
     }
 }

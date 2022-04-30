@@ -1,12 +1,30 @@
 // MARK: - LIBRARIES
 import Foundation
+
+
+
+final class ModelData: ObservableObject {
+    
+    // MARK: - STATIC PROPERTIES
+    // MARK: - PROPERTY WRAPPERS
+    // MARK: - PROPERTIES
+    @Published var landmarks: Array<Landmark> = load("landmarkData.json")
+    
+    
+    
+    // MARK: - COMPUTED PROPERTIES
+    // MARK: - STATIC METHODS
+    // MARK: - INITIALIZERS
+    // MARK: - METHODS
+    // MARK: - HELPER METHODS
+}
+
+
+
+
+
+
 /// Creates a `load(_:) `method that fetches JSON data with a given name from the app’s main bundle.
-
-
-var landmarks: Array<Landmark> = load("landmarkData.json")
-
-
-
 func load<T: Decodable>(_ filename: String)
 -> T {
     

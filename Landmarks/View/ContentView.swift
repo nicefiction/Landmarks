@@ -34,5 +34,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
         ContentView()
+            .environmentObject(ModelData.init())
+        /// Adds the model object to the environment,
+        /// which makes the object available to any subview.
     }
 }
