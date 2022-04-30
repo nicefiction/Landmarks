@@ -5,8 +5,9 @@ import SwiftUI
 
 
 
-struct Landmark: Hashable,
-                 Codable {
+struct Landmark: Codable,
+                 Hashable,
+                 Identifiable {
     
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS

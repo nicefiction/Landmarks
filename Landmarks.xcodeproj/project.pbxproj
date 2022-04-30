@@ -17,6 +17,7 @@
 		C53F1507281C4BC900DA7F07 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F1506281C4BC900DA7F07 /* Landmark.swift */; };
 		C53F1509281C515600DA7F07 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F1508281C515600DA7F07 /* ModelData.swift */; };
 		C53F150C281D131100DA7F07 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150B281D131100DA7F07 /* LandmarkRow.swift */; };
+		C53F150E281D173E00DA7F07 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150D281D173E00DA7F07 /* LandmarkList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C53F1506281C4BC900DA7F07 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		C53F1508281C515600DA7F07 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C53F150B281D131100DA7F07 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
+		C53F150D281D173E00DA7F07 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C53F14FE281BEAF400DA7F07 /* CircleImage.swift */,
+				C53F150D281D173E00DA7F07 /* LandmarkList.swift */,
 				C53F150B281D131100DA7F07 /* LandmarkRow.swift */,
 				C53F1500281BEE5D00DA7F07 /* MapView.swift */,
 			);
@@ -191,6 +194,7 @@
 				C53F14F2281BE57E00DA7F07 /* ContentView.swift in Sources */,
 				C53F1501281BEE5D00DA7F07 /* MapView.swift in Sources */,
 				C53F14F0281BE57E00DA7F07 /* LandmarksApp.swift in Sources */,
+				C53F150E281D173E00DA7F07 /* LandmarkList.swift in Sources */,
 				C53F14FF281BEAF400DA7F07 /* CircleImage.swift in Sources */,
 				C53F1507281C4BC900DA7F07 /* Landmark.swift in Sources */,
 				C53F150C281D131100DA7F07 /* LandmarkRow.swift in Sources */,
