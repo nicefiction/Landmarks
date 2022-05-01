@@ -20,6 +20,9 @@
 		C53F150E281D173E00DA7F07 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150D281D173E00DA7F07 /* LandmarkList.swift */; };
 		C53F1510281D1A5500DA7F07 /* LandmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150F281D1A5500DA7F07 /* LandmarkDetailView.swift */; };
 		C5B0390E281D6A1000796DB5 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */; };
+		C5B03944281E843100796DB5 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B03943281E843100796DB5 /* HexagonParameters.swift */; };
+		C5B03947281E854500796DB5 /* HexagonParameters - Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B03946281E854500796DB5 /* HexagonParameters - Segment.swift */; };
+		C5B03949281E8CE300796DB5 /* BadgeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B03948281E8CE300796DB5 /* BadgeBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		C53F150D281D173E00DA7F07 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		C53F150F281D1A5500DA7F07 /* LandmarkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetailView.swift; sourceTree = "<group>"; };
 		C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		C5B03943281E843100796DB5 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		C5B03946281E854500796DB5 /* HexagonParameters - Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HexagonParameters - Segment.swift"; sourceTree = "<group>"; };
+		C5B03948281E8CE300796DB5 /* BadgeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		C53F1503281C4B5200DA7F07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5B03945281E852200796DB5 /* Extension */,
+				C5B03943281E843100796DB5 /* HexagonParameters.swift */,
 				C53F1506281C4BC900DA7F07 /* Landmark.swift */,
 				C53F1508281C515600DA7F07 /* ModelData.swift */,
 			);
@@ -117,6 +125,7 @@
 		C53F150A281D127E00DA7F07 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C5B03948281E8CE300796DB5 /* BadgeBackground.swift */,
 				C53F14FE281BEAF400DA7F07 /* CircleImage.swift */,
 				C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */,
 				C53F150D281D173E00DA7F07 /* LandmarkList.swift */,
@@ -124,6 +133,14 @@
 				C53F1500281BEE5D00DA7F07 /* MapView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C5B03945281E852200796DB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5B03946281E854500796DB5 /* HexagonParameters - Segment.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +218,14 @@
 				C53F1501281BEE5D00DA7F07 /* MapView.swift in Sources */,
 				C53F14F0281BE57E00DA7F07 /* LandmarksApp.swift in Sources */,
 				C5B0390E281D6A1000796DB5 /* FavoriteButton.swift in Sources */,
+				C5B03944281E843100796DB5 /* HexagonParameters.swift in Sources */,
 				C53F150E281D173E00DA7F07 /* LandmarkList.swift in Sources */,
 				C53F1510281D1A5500DA7F07 /* LandmarkDetailView.swift in Sources */,
 				C53F14FF281BEAF400DA7F07 /* CircleImage.swift in Sources */,
+				C5B03949281E8CE300796DB5 /* BadgeBackground.swift in Sources */,
 				C53F1507281C4BC900DA7F07 /* Landmark.swift in Sources */,
 				C53F150C281D131100DA7F07 /* LandmarkRow.swift in Sources */,
+				C5B03947281E854500796DB5 /* HexagonParameters - Segment.swift in Sources */,
 				C53F1509281C515600DA7F07 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

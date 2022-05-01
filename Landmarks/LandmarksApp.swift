@@ -42,7 +42,6 @@ struct LandmarksApp: App {
 
 
 
-/*
  // MARK: - LIBRARIES
  
  // MARK: - STATIC PROPERTIES
@@ -58,4 +57,3 @@ struct LandmarksApp: App {
  
  // MARK: - STATIC PROPERTIES
  // MARK: - COMPUTED PROPERTIES
- */
