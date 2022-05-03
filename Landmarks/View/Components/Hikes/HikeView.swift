@@ -7,7 +7,7 @@ struct HikeView: View {
     
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
-    @State private var showDetail = false
+    @State private var showDetail = true
     
     
     
