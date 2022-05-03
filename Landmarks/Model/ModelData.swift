@@ -9,6 +9,7 @@ final class ModelData: ObservableObject {
     // MARK: - PROPERTY WRAPPERS
     // MARK: - PROPERTIES
     @Published var landmarks: Array<Landmark> = load("landmarkData.json")
+    var hikes: Array<Hike> = load("hikeData.json")
     
     
     

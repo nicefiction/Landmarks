@@ -42,7 +42,7 @@ struct LandmarksApp: App {
 
 
 
- // MARK: - LIBRARIES
+ // MARK: LIBRARIES
  
  // MARK: - STATIC PROPERTIES
  // MARK: - PROPERTY WRAPPERS
