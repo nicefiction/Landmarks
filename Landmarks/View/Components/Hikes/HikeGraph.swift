@@ -48,7 +48,7 @@ struct HikeGraph: View {
                     )
                     .animation(.ripple(index: index))
                 }
-                .offset(x: 0, y: proxy.size.height * heightRatio)
+                        .offset(x: 0, y: proxy.size.height * heightRatio)
             }
         }
     }
@@ -59,7 +59,7 @@ struct HikeGraph: View {
     // MARK: - INITIALIZERS
     // MARK: - METHODS
     // MARK: - HELPER METHODS
-
+    
 }
 
 
@@ -94,7 +94,7 @@ struct HikeGraph_Previews: PreviewProvider {
     // MARK: - STATIC PROPERTIES
     // MARK: - COMPUTED PROPERTIES
     static var hike = ModelData().hikes[0]
-
+    
     
     static var previews: some View {
         Group {

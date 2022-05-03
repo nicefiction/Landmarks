@@ -32,6 +32,11 @@ struct HikeView: View {
                 Spacer()
                 
                 Button {
+//                    withAnimation(
+//                        .easeIn(duration: 2.00)
+//                    ) {
+//                        showDetail.toggle()
+//                    }
                     withAnimation {
                         showDetail.toggle()
                     }
@@ -44,8 +49,10 @@ struct HikeView: View {
 //                                   value: showDetail)
                         .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
-//                        .animation(.spring(),
-//                                   value: showDetail)
+//                        .animation(
+//                            .easeIn(duration: 2.00),
+//                            value: showDetail
+//                        )
                 }
             }
             
