@@ -25,15 +25,15 @@ struct CategoryRow: View {
                        showsIndicators: false) {
                 HStack(alignment: .top,
                        spacing: 0.00) {
-                    NavigationLink(destination: {}, // FIXME: Destination
-                                   label: {
-                        
-                        ForEach(categorisedLandmarks) { (eachLandmark: Landmark) in
+                    ForEach(categorisedLandmarks) { (eachLandmark: Landmark) in
+                        NavigationLink {
+                            LandmarkDetailView(landmark: eachLandmark)
+                        } label: {
                             CategoryItem(landmark: eachLandmark)
                         }
-                    })
+                    }
                 }
-                .frame(height: 185)
+                       .frame(height: 185)
             }
         }
     }
