@@ -7,13 +7,25 @@ final class ModelData: ObservableObject {
     
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
-    // MARK: - PROPERTIES
     @Published var landmarks: Array<Landmark> = load("landmarkData.json")
+    
+    
+    
+    // MARK: - PROPERTIES
     var hikes: Array<Hike> = load("hikeData.json")
     
     
     
     // MARK: - COMPUTED PROPERTIES
+    var categories: Dictionary<String, Array<Landmark>> {
+        return Dictionary.init(grouping: landmarks,
+                               by: { (eachLandmark: Landmark) in
+            eachLandmark.category.rawValue
+        })
+    }
+    
+    
+    
     // MARK: - STATIC METHODS
     // MARK: - INITIALIZERS
     // MARK: - METHODS

@@ -23,7 +23,7 @@ struct Landmark: Codable,
     private var coordinates: Coordinates
     var isFavorite: Bool
     
-    var category: String
+    var category: Category
     var city: String
     var isFeatured: Bool
 

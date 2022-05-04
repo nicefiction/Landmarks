@@ -9,7 +9,7 @@ extension Animation {
     static func ripple(index: Int)
     -> Animation {
         
-        Animation.spring(dampingFraction: 0.5)
+        Animation.spring(dampingFraction: 0.75)
         /// Speed up the animation a bit,
         /// to shorten the time each bar takes to move to its new position.
             .speed(2)

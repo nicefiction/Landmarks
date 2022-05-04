@@ -48,7 +48,8 @@ struct HikeGraph: View {
                     )
                     .animation(.ripple(index: index))
                 }
-                        .offset(x: 0, y: proxy.size.height * heightRatio)
+                .offset(x: 0,
+                        y: proxy.size.height * heightRatio)
             }
         }
     }
