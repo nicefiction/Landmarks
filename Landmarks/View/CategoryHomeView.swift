@@ -18,11 +18,6 @@ struct CategoryHomeView: View {
     
     // MARK: - PROPERTIES
     // MARK: - COMPUTED PROPERTIES
-    // MARK: - STATIC METHODS
-    // MARK: - INITIALIZERS
-    // MARK: - METHODS
-    // MARK: - HELPER METHODS
-
     var body: some View {
         
         NavigationView {
@@ -37,6 +32,7 @@ struct CategoryHomeView: View {
                         id: \.self) { (eachKey: String) in
                     CategoryRow(categoryName: eachKey,
                                 categorisedLandmarks: modelData.categories[eachKey]!)
+                    
                 }
                 .listRowInsets(EdgeInsets())
             }
@@ -45,6 +41,13 @@ struct CategoryHomeView: View {
         }
     }
 }
+
+
+
+    // MARK: - STATIC METHODS
+    // MARK: - INITIALIZERS
+    // MARK: - METHODS
+    // MARK: - HELPER METHODS
 
 
 

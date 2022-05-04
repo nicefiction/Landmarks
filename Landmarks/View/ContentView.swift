@@ -8,6 +8,10 @@ struct ContentView: View {
     
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
+    @State private var selectedTab: Tab = .list
+    
+    
+    
     // MARK: - PROPERTIES
     // MARK: - COMPUTED PROPERTIES
     // MARK: - STATIC METHODS
@@ -17,7 +21,19 @@ struct ContentView: View {
 
     var body: some View {
         
-        LandmarkList()
+        TabView(selection: $selectedTab) {
+            CategoryHomeView()
+                .tabItem {
+                    Label("Featured", systemImage: "star")
+                }
+                .tag(Tab.featured)
+            
+            LandmarkList()
+                .tabItem {
+                    Label("List", systemImage: "list.bullet")
+                }
+                .tag(Tab.list)
+        }
     }
 }
 
