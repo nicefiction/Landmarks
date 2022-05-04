@@ -25,6 +25,13 @@ final class ModelData: ObservableObject {
     }
     
     
+    var featuredLandmarks: Array<Landmark> {
+        landmarks.filter { (eachLandmark: Landmark) in
+            eachLandmark.isFeatured == true
+        }
+    }
+    
+    
     
     // MARK: - STATIC METHODS
     // MARK: - INITIALIZERS

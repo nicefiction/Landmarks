@@ -22,10 +22,10 @@ struct Landmark: Codable,
     private var imageName: String
     private var coordinates: Coordinates
     var isFavorite: Bool
-    
     var category: Category
-    var city: String
     var isFeatured: Bool
+    
+    var city: String
 
     
     

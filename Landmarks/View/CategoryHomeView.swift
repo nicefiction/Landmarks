@@ -27,11 +27,20 @@ struct CategoryHomeView: View {
         
         NavigationView {
             List {
+                modelData.featuredLandmarks[0].image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .clipped()
+                    .listRowInsets(EdgeInsets())
                 ForEach(modelData.categories.keys.sorted(),
                         id: \.self) { (eachKey: String) in
-                    Text(eachKey)
+                    CategoryRow(categoryName: eachKey,
+                                categorisedLandmarks: modelData.categories[eachKey]!)
                 }
+                .listRowInsets(EdgeInsets())
             }
+            .listStyle(.plain)
             .navigationTitle("Featured")
         }
     }
