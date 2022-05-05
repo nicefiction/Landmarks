@@ -1,8 +1,9 @@
 // MARK: - LIBRARIES
 import SwiftUI
 
-
-
+/// The Landmarks app is the sum of all its views, including navigation views.
+/// The `App` conformer acts as the entry point for the Landmarks app,
+///  but isn’t itself a view.
 @main
 struct LandmarksApp: App {
     
@@ -21,6 +22,7 @@ struct LandmarksApp: App {
     var body: some Scene {
         
         WindowGroup {
+            /// root view:
             ContentView()
                 .environmentObject(modelData)
             /// Puts the model object in the environment

@@ -13,6 +13,7 @@ struct CategoryHomeView: View {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     @EnvironmentObject var modelData: ModelData
+    @State private var isShowingProfile: Bool = false
     
     
     
@@ -36,8 +37,21 @@ struct CategoryHomeView: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .listStyle(.plain)
+            .listStyle(.inset)
             .navigationTitle("Featured")
+            .toolbar {
+                Button {
+                    isShowingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                        .font(.title2)
+                        .accentColor(.primary)
+                }
+            }
+            .sheet(isPresented: $isShowingProfile) {
+                ProfileHost()
+                    .environmentObject(modelData)
+            }
         }
     }
 }
