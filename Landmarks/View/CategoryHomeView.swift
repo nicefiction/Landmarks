@@ -33,7 +33,6 @@ struct CategoryHomeView: View {
                         id: \.self) { (eachKey: String) in
                     CategoryRow(categoryName: eachKey,
                                 categorisedLandmarks: modelData.categories[eachKey]!)
-                    
                 }
                 .listRowInsets(EdgeInsets())
             }

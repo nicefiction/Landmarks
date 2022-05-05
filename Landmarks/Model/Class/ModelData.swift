@@ -8,6 +8,7 @@ final class ModelData: ObservableObject {
     // MARK: - STATIC PROPERTIES
     // MARK: - PROPERTY WRAPPERS
     @Published var landmarks: Array<Landmark> = load("landmarkData.json")
+    @Published var profile = Profile.default
     
     
     
