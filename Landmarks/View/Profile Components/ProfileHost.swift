@@ -35,13 +35,31 @@ struct ProfileHost: View {
         VStack(alignment:.leading,
                spacing: 20.00) {
             HStack {
+                if editMode?.wrappedValue == .active {
+                    Button("Cancel",
+                           role: .cancel) {
+                        draftProfile = modelData.profile
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
                 Spacer()
                 EditButton()
             }
             if editMode?.wrappedValue == .inactive {
                 ProfileSummary(profile: modelData.profile)
             } else {
-                Text("Profile Editor")
+                ProfileEditor(profile: $draftProfile)
+                /// Apply the `onAppear(perform:)` and `onDisappear(perform:)` modifiers
+                /// to populate the editor with the correct profile data.
+                    .onAppear {
+                        draftProfile = modelData.profile
+                    }
+                /// Update the persistent profile
+                /// when the user taps the Done button.
+                /// Otherwise, the old values appear the next time edit mode activates.
+                    .onDisappear {
+                        modelData.profile = draftProfile
+                    }
             }
         }
         .padding()
