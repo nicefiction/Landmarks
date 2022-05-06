@@ -73,8 +73,8 @@ struct LandmarkDetailView: View {
 
 
 
-// PREVIEWS //////////////////////////////////////
-struct LandmarkDetail_Previews: PreviewProvider {
+// PREVIEWS //////////////////////////////////////////
+struct LandmarkDetailView_Previews: PreviewProvider {
     
     // MARK: - STATIC PROPERTIES
     static let modelData = ModelData.init()
