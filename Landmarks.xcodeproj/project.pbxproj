@@ -67,6 +67,11 @@
 		C5C1F9D028211BB300F83E0B /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C1F9CC28211BB300F83E0B /* HikeView.swift */; };
 		C5C1F9D228211E8C00F83E0B /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C1F9D128211E8C00F83E0B /* AnimationExtension.swift */; };
 		C5C1F9D42821208500F83E0B /* AnyTransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C1F9D32821208500F83E0B /* AnyTransitionExtension.swift */; };
+		C5D18EA5282515C8009CFDE2 /* Hike+Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C1F9C628211A7B00F83E0B /* Hike+Observation.swift */; };
+		C5D18EA6282515C8009CFDE2 /* Profile+Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516F2562823BFA900A6E8DC /* Profile+Season.swift */; };
+		C5D18EA7282515C8009CFDE2 /* Landmark+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590A3D72822666700F0D9FC /* Landmark+Category.swift */; };
+		C5D18EA8282515F2009CFDE2 /* LandmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150F281D1A5500DA7F07 /* LandmarkDetailView.swift */; };
+		C5D18EA928251620009CFDE2 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -531,14 +536,19 @@
 				C516F27C282509DA00A6E8DC /* NotificationController.swift in Sources */,
 				C516F29C28250C6E00A6E8DC /* LandmarkRow.swift in Sources */,
 				C516F29728250C6E00A6E8DC /* MapView.swift in Sources */,
+				C5D18EA928251620009CFDE2 /* FavoriteButton.swift in Sources */,
 				C516F29828250C6E00A6E8DC /* ModelDataClass.swift in Sources */,
+				C5D18EA8282515F2009CFDE2 /* LandmarkDetailView.swift in Sources */,
 				C516F27A282509DA00A6E8DC /* ContentView.swift in Sources */,
+				C5D18EA7282515C8009CFDE2 /* Landmark+Category.swift in Sources */,
 				C516F280282509DA00A6E8DC /* ComplicationController.swift in Sources */,
 				C516F29628250C6E00A6E8DC /* LandmarkList.swift in Sources */,
 				C516F29B28250C6E00A6E8DC /* LandmarkStruct.swift in Sources */,
 				C516F29428250C6E00A6E8DC /* LandmarksApp.swift in Sources */,
+				C5D18EA6282515C8009CFDE2 /* Profile+Season.swift in Sources */,
 				C516F29528250C6E00A6E8DC /* ProfileStruct.swift in Sources */,
 				C516F29A28250C6E00A6E8DC /* HikeStruct.swift in Sources */,
+				C5D18EA5282515C8009CFDE2 /* Hike+Observation.swift in Sources */,
 				C516F27E282509DA00A6E8DC /* NotificationView.swift in Sources */,
 				C516F29928250C6E00A6E8DC /* CircleImage.swift in Sources */,
 			);
