@@ -50,7 +50,7 @@
 		C53F1510281D1A5500DA7F07 /* LandmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150F281D1A5500DA7F07 /* LandmarkDetailView.swift */; };
 		C5437B572825206000C23C84 /* LandmarkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53F150F281D1A5500DA7F07 /* LandmarkDetailView.swift */; };
 		C555832428251A80007D2833 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C555832328251A80007D2833 /* LandmarkDetail.swift */; };
-		C59017B228256BB600441F6E /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */; };
+		C59017C528258E4A00441F6E /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B0390D281D6A1000796DB5 /* FavoriteButton.swift */; };
 		C590A3D62822645400F0D9FC /* CategoryHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590A3D52822645400F0D9FC /* CategoryHomeView.swift */; };
 		C590A3D82822666700F0D9FC /* Landmark+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590A3D72822666700F0D9FC /* Landmark+Category.swift */; };
 		C590A3DA28226C8900F0D9FC /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C590A3D928226C8900F0D9FC /* CategoryRow.swift */; };
@@ -306,10 +306,10 @@
 		C53F14FD281BEAD200DA7F07 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C53F14F1281BE57E00DA7F07 /* ContentView.swift */,
 				C516F25E2823CDE800A6E8DC /* Component */,
 				C516F2582823C14600A6E8DC /* Extension */,
 				C590A3D52822645400F0D9FC /* CategoryHomeView.swift */,
-				C53F14F1281BE57E00DA7F07 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,7 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C516F27C282509DA00A6E8DC /* NotificationController.swift in Sources */,
-				C59017B228256BB600441F6E /* FavoriteButton.swift in Sources */,
+				C59017C528258E4A00441F6E /* FavoriteButton.swift in Sources */,
 				C516F29C28250C6E00A6E8DC /* LandmarkRow.swift in Sources */,
 				C516F29728250C6E00A6E8DC /* MapView.swift in Sources */,
 				C516F29828250C6E00A6E8DC /* ModelDataClass.swift in Sources */,

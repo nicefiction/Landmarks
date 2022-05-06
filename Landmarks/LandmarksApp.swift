@@ -28,6 +28,12 @@ struct LandmarksApp: App {
             /// Puts the model object in the environment
             /// when you run the app in the simulator or on a device.
         }
+        #if os(watchOS)
+        /// When Apple Watch receives a notification,
+        /// it looks for a scene in your app associated with the notification’s category:
+        WKNotificationScene(controller: NotificationController.self,
+                            category: "LandmarkNear")
+        #endif
     }
     
     
