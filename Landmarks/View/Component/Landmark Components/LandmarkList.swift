@@ -33,7 +33,6 @@ struct LandmarkList: View {
     }
     
     
-    
     var body: some View {
         
         NavigationView {
